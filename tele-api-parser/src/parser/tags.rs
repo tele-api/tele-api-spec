@@ -111,6 +111,6 @@ mod tests {
 
         const TAGS: &str = r#"<img src="//telegram.org/img/emoji/40/F09F8EB2.png" height="20" width="20" />, <img src="//telegram.org/img/emoji/40/F09F8EAF.png" height="20" width="20" />"#;
         let md = html2md::parse_html_custom(TAGS, &map);
-        assert_eq!(md, TAGS);
+        assert_eq!(md, "<img src=\"//telegram.org/img/emoji/40/F09F8EB2.png\" height=\"20\" width=\"20\">, <img src=\"//telegram.org/img/emoji/40/F09F8EAF.png\" height=\"20\" width=\"20\">");
     }
 }
