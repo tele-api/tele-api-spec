@@ -1,0 +1,37 @@
+[workspace]
+members = ["tele-api-parser", "tele-api-spec"]
+# Only check / build main crates by default (check all with `--workspace`)
+default-members = ["tele-api-spec"]
+
+resolver = "3"
+
+[workspace.dependencies]
+anyhow = "1.0.97"
+chrono = "0.4.40"
+ego-tree = "0.10.0"
+html2md = "0.2.15"
+indexmap = "2.9.0"
+itertools = "0.14.0"
+log = "0.4.27"
+logos = "0.15.0"
+openapiv3 = "2.0.0"
+percent-encoding = "2.3.1"
+pretty_env_logger = "0.5.0"
+pulldown-cmark = "0.13.0"
+reqwest = { version = "0.12.15", features = ["blocking"] }
+scraper = "0.23.1"
+schemars = "0.8.22"
+semver = "1.0.26"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+serde_yml = "0.0.12"
+structopt = "0.3.26"
+tele-api-parser = { path = "tele-api-parser" }
+tendril = "0.4.3"
+thiserror = "2.0.12"
+
+
+[profile.release]
+lto = true           # Enable Link Time Optimization to remove unused code
+codegen-units = 1    # Maximize optimization at the cost of slower compilation
+strip = true         # Fully strip debug symbols; debugging in production will be difficult

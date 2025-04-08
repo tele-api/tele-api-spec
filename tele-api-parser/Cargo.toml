@@ -1,0 +1,20 @@
+[package]
+name = "tele-api-parser"
+version = "0.1.0"
+authors = ["CtrlX <gitctrlx@gmail.com>"]
+edition = "2024"
+license = "MIT"
+description = "Telegram Bot API parser"
+
+[dependencies]
+scraper = { workspace = true }
+ego-tree = { workspace = true }
+thiserror = { workspace = true }
+itertools = { workspace = true }
+chrono = { workspace = true }
+html2md = { workspace = true }
+semver = { workspace = true }
+percent-encoding = { workspace = true }
+logos = { workspace = true }
+log = { workspace = true }
+tendril = { workspace = true }

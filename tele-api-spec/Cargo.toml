@@ -1,0 +1,19 @@
+[package]
+name = "tele-api-spec"
+version = "0.1.0"
+authors = ["CtrlX <gitctrlx@gmail.com>"]
+edition = "2024"
+
+[dependencies]
+reqwest = { workspace = true }
+anyhow = { workspace = true }
+openapiv3 = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_yml = { workspace = true }
+tele-api-parser = { workspace = true }
+chrono = { workspace = true }
+indexmap = { workspace = true }
+pulldown-cmark = { workspace = true }
+structopt = { workspace = true }
+pretty_env_logger = { workspace = true }
