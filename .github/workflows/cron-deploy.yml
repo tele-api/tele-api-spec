@@ -3,6 +3,12 @@ name: Cron Deploy
 on:
   schedule:
     - cron: '0 0 * * *'
+  push:
+    branches-ignore:
+      - gh-pages
+  pull_request:
+    branches-ignore:
+      - gh-pages
   workflow_dispatch:
 
 jobs:
