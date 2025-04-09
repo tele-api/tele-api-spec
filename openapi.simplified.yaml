@@ -351,7 +351,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -385,7 +386,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - text
@@ -398,7 +401,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -432,7 +436,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - text
@@ -445,7 +451,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -479,7 +486,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - text
@@ -519,13 +528,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original message was sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 video_start_timestamp:
                   description: New start timestamp for the forwarded video in the message
                   type: integer
@@ -548,13 +559,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original message was sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 video_start_timestamp:
                   description: New start timestamp for the forwarded video in the message
                   type: integer
@@ -577,13 +590,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original message was sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 video_start_timestamp:
                   description: New start timestamp for the forwarded video in the message
                   type: integer
@@ -636,13 +651,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original messages were sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_ids:
                   description: A JSON-serialized list of 1-100 identifiers of messages in the chat *from\_chat\_id* to forward. The identifiers must be specified in a strictly increasing order.
                   type: array
@@ -664,13 +681,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original messages were sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_ids:
                   description: A JSON-serialized list of 1-100 identifiers of messages in the chat *from\_chat\_id* to forward. The identifiers must be specified in a strictly increasing order.
                   type: array
@@ -692,13 +711,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original messages were sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_ids:
                   description: A JSON-serialized list of 1-100 identifiers of messages in the chat *from\_chat\_id* to forward. The identifiers must be specified in a strictly increasing order.
                   type: array
@@ -752,13 +773,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original message was sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Message identifier in the chat specified in *from\_chat\_id*
                   type: integer
@@ -793,7 +816,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - from_chat_id
@@ -804,13 +829,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original message was sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Message identifier in the chat specified in *from\_chat\_id*
                   type: integer
@@ -845,7 +872,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - from_chat_id
@@ -856,13 +885,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original message was sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Message identifier in the chat specified in *from\_chat\_id*
                   type: integer
@@ -897,7 +928,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - from_chat_id
@@ -938,13 +971,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original messages were sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_ids:
                   description: A JSON-serialized list of 1-100 identifiers of messages in the chat *from\_chat\_id* to copy. The identifiers must be specified in a strictly increasing order.
                   type: array
@@ -969,13 +1004,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original messages were sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_ids:
                   description: A JSON-serialized list of 1-100 identifiers of messages in the chat *from\_chat\_id* to copy. The identifiers must be specified in a strictly increasing order.
                   type: array
@@ -1000,13 +1037,15 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 from_chat_id:
                   description: Unique identifier for the chat where the original messages were sent (or channel username in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_ids:
                   description: A JSON-serialized list of 1-100 identifiers of messages in the chat *from\_chat\_id* to copy. The identifiers must be specified in a strictly increasing order.
                   type: array
@@ -1066,12 +1105,15 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 photo:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Photo to send. Pass a file\_id as String to send a photo that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a photo from the Internet, or upload a new photo using multipart/form-data. The photo must be at most 10 MB in size. The photo's width and height must not exceed 10000 in total. Width and height ratio must be at most 20. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 caption:
                   description: Photo caption (may also be used when resending photos by *file\_id*), 0-1024 characters after entities parsing
                   type: string
@@ -1106,7 +1148,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - photo
@@ -1152,12 +1196,15 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 audio:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Audio file to send. Pass a file\_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using multipart/form-data. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 caption:
                   description: Audio caption, 0-1024 characters after entities parsing
                   type: string
@@ -1181,7 +1228,9 @@ paths:
                   description: Track name
                   type: string
                 thumbnail:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass “attach://\<file\_attach\_name\>” if the thumbnail was uploaded using multipart/form-data under \<file\_attach\_name\>. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 disable_notification:
                   description: Sends the message [silently](https://telegram.org/blog/channels-2-0#silent-messages). Users will receive a notification with no sound.
                   type: boolean
@@ -1197,7 +1246,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - audio
@@ -1240,14 +1291,19 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 document:
-                  $ref: '#/components/schemas/InputFile'
+                  description: File to send. Pass a file\_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 thumbnail:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass “attach://\<file\_attach\_name\>” if the thumbnail was uploaded using multipart/form-data under \<file\_attach\_name\>. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 caption:
                   description: Document caption (may also be used when resending documents by *file\_id*), 0-1024 characters after entities parsing
                   type: string
@@ -1279,7 +1335,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - document
@@ -1322,12 +1380,15 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 video:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Video to send. Pass a file\_id as String to send a video that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a video from the Internet, or upload a new video using multipart/form-data. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 duration:
                   description: Duration of sent video in seconds
                   type: integer
@@ -1338,9 +1399,13 @@ paths:
                   description: Video height
                   type: integer
                 thumbnail:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass “attach://\<file\_attach\_name\>” if the thumbnail was uploaded using multipart/form-data under \<file\_attach\_name\>. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 cover:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Cover for the video in the message. Pass a file\_id to send a file that exists on the Telegram servers (recommended), pass an HTTP URL for Telegram to get a file from the Internet, or pass “attach://\<file\_attach\_name\>” to upload a new one using multipart/form-data under \<file\_attach\_name\> name. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 start_timestamp:
                   description: Start timestamp for the video in the message
                   type: integer
@@ -1381,7 +1446,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - video
@@ -1424,12 +1491,15 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 animation:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Animation to send. Pass a file\_id as String to send an animation that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an animation from the Internet, or upload a new animation using multipart/form-data. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 duration:
                   description: Duration of sent animation in seconds
                   type: integer
@@ -1440,7 +1510,9 @@ paths:
                   description: Animation height
                   type: integer
                 thumbnail:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass “attach://\<file\_attach\_name\>” if the thumbnail was uploaded using multipart/form-data under \<file\_attach\_name\>. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 caption:
                   description: Animation caption (may also be used when resending animation by *file\_id*), 0-1024 characters after entities parsing
                   type: string
@@ -1475,7 +1547,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - animation
@@ -1518,12 +1592,15 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 voice:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Audio file to send. Pass a file\_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 caption:
                   description: Voice message caption, 0-1024 characters after entities parsing
                   type: string
@@ -1555,7 +1632,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - voice
@@ -1598,12 +1677,15 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 video_note:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Video note to send. Pass a file\_id as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files). Sending video notes by a URL is currently unsupported
+                  type: object
+                  additionalProperties: true
                 duration:
                   description: Duration of sent video in seconds
                   type: integer
@@ -1611,7 +1693,9 @@ paths:
                   description: Video width and height, i.e. diameter of the video message
                   type: integer
                 thumbnail:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass “attach://\<file\_attach\_name\>” if the thumbnail was uploaded using multipart/form-data under \<file\_attach\_name\>. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+                  type: object
+                  additionalProperties: true
                 disable_notification:
                   description: Sends the message [silently](https://telegram.org/blog/channels-2-0#silent-messages). Users will receive a notification with no sound.
                   type: boolean
@@ -1627,7 +1711,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - video_note
@@ -1670,7 +1756,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`). If the chat is a channel, all Telegram Star proceeds from this media will be credited to the chat's balance. Otherwise, they will be credited to the bot's balance.
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 star_count:
                   description: The number of Telegram Stars that must be paid to buy access to the media; 1-2500
                   type: integer
@@ -1710,7 +1797,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - star_count
@@ -1754,7 +1843,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -1762,7 +1852,8 @@ paths:
                   description: A JSON-serialized array describing messages to be sent, must include 2-10 items
                   type: array
                   items:
-                    $ref: '#/components/schemas/InputMediaAudio'
+                    type: object
+                    additionalProperties: true
                 disable_notification:
                   description: Sends messages [silently](https://telegram.org/blog/channels-2-0#silent-messages). Users will receive a notification with no sound.
                   type: boolean
@@ -1821,7 +1912,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -1858,7 +1950,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - latitude
@@ -1872,7 +1966,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -1909,7 +2004,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - latitude
@@ -1923,7 +2020,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -1960,7 +2058,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - latitude
@@ -2004,7 +2104,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2047,7 +2148,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - latitude
@@ -2063,7 +2166,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2106,7 +2210,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - latitude
@@ -2122,7 +2228,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2165,7 +2272,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - latitude
@@ -2211,7 +2320,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2242,7 +2352,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - phone_number
@@ -2256,7 +2368,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2287,7 +2400,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - phone_number
@@ -2301,7 +2416,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2332,7 +2448,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - phone_number
@@ -2376,7 +2494,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2450,7 +2569,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - question
@@ -2464,7 +2585,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2538,7 +2660,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - question
@@ -2552,7 +2676,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2626,7 +2751,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - question
@@ -2670,7 +2797,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2700,7 +2828,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -2712,7 +2842,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2742,7 +2873,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -2754,7 +2887,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -2784,7 +2918,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -2831,7 +2967,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread; for supergroups only
                   type: integer
@@ -2862,7 +2999,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread; for supergroups only
                   type: integer
@@ -2893,7 +3031,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread; for supergroups only
                   type: integer
@@ -2952,7 +3091,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the target message. If the message belongs to a media group, the reaction is set to the first non-deleted message in the group instead.
                   type: integer
@@ -2973,7 +3113,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the target message. If the message belongs to a media group, the reaction is set to the first non-deleted message in the group instead.
                   type: integer
@@ -2994,7 +3135,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the target message. If the message belongs to a media group, the reaction is set to the first non-deleted message in the group instead.
                   type: integer
@@ -3263,7 +3405,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target group or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3282,7 +3425,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target group or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3301,7 +3445,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target group or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3351,7 +3496,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target group or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3367,7 +3513,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target group or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3383,7 +3530,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target group or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3430,7 +3578,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3452,7 +3601,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3474,7 +3624,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3527,7 +3678,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3585,7 +3737,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3643,7 +3796,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3732,7 +3886,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3751,7 +3906,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3770,7 +3926,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -3820,7 +3977,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 sender_chat_id:
                   description: Unique identifier of the target sender chat
                   type: integer
@@ -3833,7 +3991,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 sender_chat_id:
                   description: Unique identifier of the target sender chat
                   type: integer
@@ -3846,7 +4005,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 sender_chat_id:
                   description: Unique identifier of the target sender chat
                   type: integer
@@ -3890,7 +4050,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 sender_chat_id:
                   description: Unique identifier of the target sender chat
                   type: integer
@@ -3903,7 +4064,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 sender_chat_id:
                   description: Unique identifier of the target sender chat
                   type: integer
@@ -3916,7 +4078,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 sender_chat_id:
                   description: Unique identifier of the target sender chat
                   type: integer
@@ -3960,7 +4123,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 permissions:
                   $ref: '#/components/schemas/ChatPermissions'
                 use_independent_chat_permissions:
@@ -3975,7 +4139,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 permissions:
                   $ref: '#/components/schemas/ChatPermissions'
                 use_independent_chat_permissions:
@@ -3990,7 +4155,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 permissions:
                   $ref: '#/components/schemas/ChatPermissions'
                 use_independent_chat_permissions:
@@ -4036,7 +4202,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -4045,7 +4212,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -4054,7 +4222,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -4093,7 +4262,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: Invite link name; 0-32 characters
                   type: string
@@ -4116,7 +4286,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: Invite link name; 0-32 characters
                   type: string
@@ -4139,7 +4310,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: Invite link name; 0-32 characters
                   type: string
@@ -4192,7 +4364,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 invite_link:
                   description: The invite link to edit
                   type: string
@@ -4219,7 +4392,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 invite_link:
                   description: The invite link to edit
                   type: string
@@ -4246,7 +4420,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 invite_link:
                   description: The invite link to edit
                   type: string
@@ -4303,7 +4478,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target channel chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: Invite link name; 0-32 characters
                   type: string
@@ -4325,7 +4501,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target channel chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: Invite link name; 0-32 characters
                   type: string
@@ -4347,7 +4524,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target channel chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: Invite link name; 0-32 characters
                   type: string
@@ -4399,7 +4577,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 invite_link:
                   description: The invite link to edit
                   type: string
@@ -4417,7 +4596,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 invite_link:
                   description: The invite link to edit
                   type: string
@@ -4435,7 +4615,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 invite_link:
                   description: The invite link to edit
                   type: string
@@ -4483,7 +4664,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier of the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 invite_link:
                   description: The invite link to revoke
                   type: string
@@ -4496,7 +4678,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier of the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 invite_link:
                   description: The invite link to revoke
                   type: string
@@ -4509,7 +4692,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier of the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 invite_link:
                   description: The invite link to revoke
                   type: string
@@ -4552,7 +4736,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -4565,7 +4750,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -4578,7 +4764,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -4622,7 +4809,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -4635,7 +4823,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -4648,7 +4837,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -4692,7 +4882,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 photo:
                   $ref: '#/components/schemas/InputFile'
               required:
@@ -4735,7 +4926,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -4744,7 +4936,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -4753,7 +4946,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -4793,7 +4987,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 title:
                   description: New chat title, 1-128 characters
                   type: string
@@ -4808,7 +5003,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 title:
                   description: New chat title, 1-128 characters
                   type: string
@@ -4823,7 +5019,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 title:
                   description: New chat title, 1-128 characters
                   type: string
@@ -4869,7 +5066,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 description:
                   description: New chat description, 0-255 characters
                   type: string
@@ -4883,7 +5081,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 description:
                   description: New chat description, 0-255 characters
                   type: string
@@ -4897,7 +5096,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 description:
                   description: New chat description, 0-255 characters
                   type: string
@@ -4945,7 +5145,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of a message to pin
                   type: integer
@@ -4964,7 +5165,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of a message to pin
                   type: integer
@@ -4983,7 +5185,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of a message to pin
                   type: integer
@@ -5033,7 +5236,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the message to unpin. Required if *business\_connection\_id* is specified. If not specified, the most recent pinned message (by sending date) will be unpinned.
                   type: integer
@@ -5048,7 +5252,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the message to unpin. Required if *business\_connection\_id* is specified. If not specified, the most recent pinned message (by sending date) will be unpinned.
                   type: integer
@@ -5063,7 +5268,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the message to unpin. Required if *business\_connection\_id* is specified. If not specified, the most recent pinned message (by sending date) will be unpinned.
                   type: integer
@@ -5106,7 +5312,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -5115,7 +5322,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -5124,7 +5332,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -5164,7 +5373,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -5173,7 +5383,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -5182,7 +5393,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -5222,7 +5434,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -5231,7 +5444,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -5240,7 +5454,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -5279,7 +5494,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -5288,7 +5504,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -5297,7 +5514,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -5338,7 +5556,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -5347,7 +5566,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -5356,7 +5576,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -5395,7 +5616,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -5408,7 +5630,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -5421,7 +5644,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -5464,7 +5688,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 sticker_set_name:
                   description: Name of the sticker set to be set as the group sticker set
                   type: string
@@ -5477,7 +5702,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 sticker_set_name:
                   description: Name of the sticker set to be set as the group sticker set
                   type: string
@@ -5490,7 +5716,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 sticker_set_name:
                   description: Name of the sticker set to be set as the group sticker set
                   type: string
@@ -5534,7 +5761,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -5543,7 +5771,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -5552,7 +5781,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -5621,7 +5851,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: Topic name, 1-128 characters
                   type: string
@@ -5649,7 +5880,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: Topic name, 1-128 characters
                   type: string
@@ -5677,7 +5909,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: Topic name, 1-128 characters
                   type: string
@@ -5735,7 +5968,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5756,7 +5990,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5777,7 +6012,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5829,7 +6065,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5842,7 +6079,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5855,7 +6093,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5899,7 +6138,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5912,7 +6152,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5925,7 +6166,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5969,7 +6211,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5982,7 +6225,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -5995,7 +6239,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -6039,7 +6284,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -6052,7 +6298,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -6065,7 +6312,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread of the forum topic
                   type: integer
@@ -6109,7 +6357,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: New topic name, 1-128 characters
                   type: string
@@ -6124,7 +6373,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: New topic name, 1-128 characters
                   type: string
@@ -6139,7 +6389,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 name:
                   description: New topic name, 1-128 characters
                   type: string
@@ -6185,7 +6436,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -6194,7 +6446,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -6203,7 +6456,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -6243,7 +6497,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -6252,7 +6507,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -6261,7 +6517,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -6301,7 +6558,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -6310,7 +6568,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -6319,7 +6578,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -6359,7 +6619,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -6368,7 +6629,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -6377,7 +6639,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -6417,7 +6680,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -6426,7 +6690,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -6435,7 +6700,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -6584,7 +6850,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the chat or username of the channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -6597,7 +6864,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the chat or username of the channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -6610,7 +6878,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the chat or username of the channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 user_id:
                   description: Unique identifier of the target user
                   type: integer
@@ -7481,7 +7750,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7516,7 +7786,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7551,7 +7822,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7596,7 +7868,8 @@ paths:
                     default: true
                     type: boolean
                   result:
-                    $ref: '#/components/schemas/Message'
+                    type: object
+                    additionalProperties: true
                 required:
                 - ok
                 - result
@@ -7616,7 +7889,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7650,7 +7924,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7684,7 +7959,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7728,7 +8004,8 @@ paths:
                     default: true
                     type: boolean
                   result:
-                    $ref: '#/components/schemas/Message'
+                    type: object
+                    additionalProperties: true
                 required:
                 - ok
                 - result
@@ -7748,7 +8025,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7780,7 +8058,8 @@ paths:
                     default: true
                     type: boolean
                   result:
-                    $ref: '#/components/schemas/Message'
+                    type: object
+                    additionalProperties: true
                 required:
                 - ok
                 - result
@@ -7800,7 +8079,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7839,7 +8119,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7878,7 +8159,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -7927,7 +8209,8 @@ paths:
                     default: true
                     type: boolean
                   result:
-                    $ref: '#/components/schemas/Message'
+                    type: object
+                    additionalProperties: true
                 required:
                 - ok
                 - result
@@ -7947,7 +8230,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message with live location to stop
                   type: integer
@@ -7965,7 +8249,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message with live location to stop
                   type: integer
@@ -7983,7 +8268,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message with live location to stop
                   type: integer
@@ -8011,7 +8297,8 @@ paths:
                     default: true
                     type: boolean
                   result:
-                    $ref: '#/components/schemas/Message'
+                    type: object
+                    additionalProperties: true
                 required:
                 - ok
                 - result
@@ -8031,7 +8318,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -8049,7 +8337,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -8067,7 +8356,8 @@ paths:
                   type: string
                 chat_id:
                   description: Required if *inline\_message\_id* is not specified. Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Required if *inline\_message\_id* is not specified. Identifier of the message to edit
                   type: integer
@@ -8095,7 +8385,8 @@ paths:
                     default: true
                     type: boolean
                   result:
-                    $ref: '#/components/schemas/Message'
+                    type: object
+                    additionalProperties: true
                 required:
                 - ok
                 - result
@@ -8115,7 +8406,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the original message with the poll
                   type: integer
@@ -8133,7 +8425,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the original message with the poll
                   type: integer
@@ -8151,7 +8444,8 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the original message with the poll
                   type: integer
@@ -8196,7 +8490,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the message to delete
                   type: integer
@@ -8209,7 +8504,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the message to delete
                   type: integer
@@ -8222,7 +8518,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_id:
                   description: Identifier of the message to delete
                   type: integer
@@ -8266,7 +8563,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_ids:
                   description: A JSON-serialized list of 1-100 identifiers of messages to delete. See [deleteMessage](https://core.telegram.org/bots/api/#deletemessage) for limitations on which messages can be deleted
                   type: array
@@ -8281,7 +8579,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_ids:
                   description: A JSON-serialized list of 1-100 identifiers of messages to delete. See [deleteMessage](https://core.telegram.org/bots/api/#deletemessage) for limitations on which messages can be deleted
                   type: array
@@ -8296,7 +8595,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_ids:
                   description: A JSON-serialized list of 1-100 identifiers of messages to delete. See [deleteMessage](https://core.telegram.org/bots/api/#deletemessage) for limitations on which messages can be deleted
                   type: array
@@ -8345,12 +8645,15 @@ paths:
                   type: string
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
                 sticker:
-                  $ref: '#/components/schemas/InputFile'
+                  description: Sticker to send. Pass a file\_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a .WEBP sticker from the Internet, or upload a new .WEBP, .TGS, or .WEBM sticker using multipart/form-data. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files). Video and animated stickers can't be sent via an HTTP URL.
+                  type: object
+                  additionalProperties: true
                 emoji:
                   description: Emoji associated with the sticker; only for just uploaded stickers
                   type: string
@@ -8369,7 +8672,9 @@ paths:
                 reply_parameters:
                   $ref: '#/components/schemas/ReplyParameters'
                 reply_markup:
-                  $ref: '#/components/schemas/InlineKeyboardMarkup'
+                  description: Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards), [custom reply keyboard](https://core.telegram.org/bots/features#keyboards), instructions to remove a reply keyboard or to force a reply from the user
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
               - sticker
@@ -9168,7 +9473,9 @@ paths:
                   description: User identifier of the sticker set owner
                   type: integer
                 thumbnail:
-                  $ref: '#/components/schemas/InputFile'
+                  description: A **.WEBP** or **.PNG** image with the thumbnail, must be up to 128 kilobytes in size and have a width and height of exactly 100px, or a **.TGS** animation with a thumbnail up to 32 kilobytes in size (see [https://core.telegram.org/stickers#animation-requirements](https://core.telegram.org/stickers#animation-requirements) for animated sticker technical requirements), or a **.WEBM** video with the thumbnail up to 32 kilobytes in size; see [https://core.telegram.org/stickers#video-requirements](https://core.telegram.org/stickers#video-requirements) for video sticker technical requirements. Pass a *file\_id* as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files). Animated and video sticker set thumbnails can't be uploaded via HTTP URL. If omitted, then the thumbnail is dropped and the first sticker is used as the thumbnail.
+                  type: object
+                  additionalProperties: true
                 format:
                   description: Format of the thumbnail, must be one of “static” for a **.WEBP** or **.PNG** image, “animated” for a **.TGS** animation, or “video” for a **.WEBM** video
                   type: string
@@ -9372,7 +9679,8 @@ paths:
                   type: integer
                 chat_id:
                   description: Required if *user\_id* is not specified. Unique identifier for the chat or username of the channel (in the format `@channelusername`) that will receive the gift.
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 gift_id:
                   description: Identifier of the gift
                   type: string
@@ -9403,7 +9711,8 @@ paths:
                   type: integer
                 chat_id:
                   description: Required if *user\_id* is not specified. Unique identifier for the chat or username of the channel (in the format `@channelusername`) that will receive the gift.
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 gift_id:
                   description: Identifier of the gift
                   type: string
@@ -9434,7 +9743,8 @@ paths:
                   type: integer
                 chat_id:
                   description: Required if *user\_id* is not specified. Unique identifier for the chat or username of the channel (in the format `@channelusername`) that will receive the gift.
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 gift_id:
                   description: Identifier of the gift
                   type: string
@@ -9566,7 +9876,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 custom_description:
                   description: Custom description for the verification; 0-70 characters. Must be empty if the organization isn't allowed to provide a custom verification description.
                   type: string
@@ -9580,7 +9891,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 custom_description:
                   description: Custom description for the verification; 0-70 characters. Must be empty if the organization isn't allowed to provide a custom verification description.
                   type: string
@@ -9594,7 +9906,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 custom_description:
                   description: Custom description for the verification; 0-70 characters. Must be empty if the organization isn't allowed to provide a custom verification description.
                   type: string
@@ -9697,7 +10010,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           multipart/form-data:
@@ -9706,7 +10020,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
           application/json:
@@ -9715,7 +10030,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
               required:
               - chat_id
         required: true
@@ -10035,7 +10351,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -10140,7 +10457,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -10245,7 +10563,8 @@ paths:
               properties:
                 chat_id:
                   description: Unique identifier for the target chat or username of the target channel (in the format `@channelusername`)
-                  type: integer
+                  type: object
+                  additionalProperties: true
                 message_thread_id:
                   description: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only
                   type: integer
@@ -11370,7 +11689,8 @@ paths:
                     default: true
                     type: boolean
                   result:
-                    $ref: '#/components/schemas/Message'
+                    type: object
+                    additionalProperties: true
                 required:
                 - ok
                 - result
@@ -12089,6 +12409,8 @@ components:
 
         * [Message](https://core.telegram.org/bots/api/#message)
         * [InaccessibleMessage](https://core.telegram.org/bots/api/#inaccessiblemessage)
+      type: object
+      additionalProperties: true
     MessageEntity:
       externalDocs:
         url: https://core.telegram.org/bots/api/#messageentity
@@ -12236,7 +12558,8 @@ components:
           type: integer
         chat_id:
           description: '*Optional*. If the message to be replied to is from a different chat, unique identifier for the chat or username of the channel (in the format `@channelusername`). Not supported for messages sent on behalf of a business account.'
-          type: integer
+          type: object
+          additionalProperties: true
         allow_sending_without_reply:
           description: '*Optional*. Pass *True* if the message should be sent even if the specified message to be replied to is not found. Always *False* for replies in another chat or forum topic. Always *True* for messages sent on behalf of a business account.'
           type: boolean
@@ -12268,6 +12591,8 @@ components:
         * [MessageOriginHiddenUser](https://core.telegram.org/bots/api/#messageoriginhiddenuser)
         * [MessageOriginChat](https://core.telegram.org/bots/api/#messageoriginchat)
         * [MessageOriginChannel](https://core.telegram.org/bots/api/#messageoriginchannel)
+      type: object
+      additionalProperties: true
     MessageOriginUser:
       externalDocs:
         url: https://core.telegram.org/bots/api/#messageoriginuser
@@ -12620,6 +12945,8 @@ components:
         * [PaidMediaPreview](https://core.telegram.org/bots/api/#paidmediapreview)
         * [PaidMediaPhoto](https://core.telegram.org/bots/api/#paidmediaphoto)
         * [PaidMediaVideo](https://core.telegram.org/bots/api/#paidmediavideo)
+      type: object
+      additionalProperties: true
     PaidMediaPreview:
       externalDocs:
         url: https://core.telegram.org/bots/api/#paidmediapreview
@@ -12967,6 +13294,8 @@ components:
         * [BackgroundFillSolid](https://core.telegram.org/bots/api/#backgroundfillsolid)
         * [BackgroundFillGradient](https://core.telegram.org/bots/api/#backgroundfillgradient)
         * [BackgroundFillFreeformGradient](https://core.telegram.org/bots/api/#backgroundfillfreeformgradient)
+      type: object
+      additionalProperties: true
     BackgroundFillSolid:
       externalDocs:
         url: https://core.telegram.org/bots/api/#backgroundfillsolid
@@ -13035,6 +13364,8 @@ components:
         * [BackgroundTypeWallpaper](https://core.telegram.org/bots/api/#backgroundtypewallpaper)
         * [BackgroundTypePattern](https://core.telegram.org/bots/api/#backgroundtypepattern)
         * [BackgroundTypeChatTheme](https://core.telegram.org/bots/api/#backgroundtypechattheme)
+      type: object
+      additionalProperties: true
     BackgroundTypeFill:
       externalDocs:
         url: https://core.telegram.org/bots/api/#backgroundtypefill
@@ -13989,6 +14320,8 @@ components:
         * [ChatMemberRestricted](https://core.telegram.org/bots/api/#chatmemberrestricted)
         * [ChatMemberLeft](https://core.telegram.org/bots/api/#chatmemberleft)
         * [ChatMemberBanned](https://core.telegram.org/bots/api/#chatmemberbanned)
+      type: object
+      additionalProperties: true
     ChatMemberOwner:
       externalDocs:
         url: https://core.telegram.org/bots/api/#chatmemberowner
@@ -14396,6 +14729,8 @@ components:
         * [ReactionTypeEmoji](https://core.telegram.org/bots/api/#reactiontypeemoji)
         * [ReactionTypeCustomEmoji](https://core.telegram.org/bots/api/#reactiontypecustomemoji)
         * [ReactionTypePaid](https://core.telegram.org/bots/api/#reactiontypepaid)
+      type: object
+      additionalProperties: true
     ReactionTypeEmoji:
       externalDocs:
         url: https://core.telegram.org/bots/api/#reactiontypeemoji
@@ -14640,6 +14975,8 @@ components:
         * [BotCommandScopeChat](https://core.telegram.org/bots/api/#botcommandscopechat)
         * [BotCommandScopeChatAdministrators](https://core.telegram.org/bots/api/#botcommandscopechatadministrators)
         * [BotCommandScopeChatMember](https://core.telegram.org/bots/api/#botcommandscopechatmember)
+      type: object
+      additionalProperties: true
     BotCommandScopeDefault:
       externalDocs:
         url: https://core.telegram.org/bots/api/#botcommandscopedefault
@@ -14700,7 +15037,8 @@ components:
           type: string
         chat_id:
           description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-          type: integer
+          type: object
+          additionalProperties: true
       required:
       - type
       - chat_id
@@ -14716,7 +15054,8 @@ components:
           type: string
         chat_id:
           description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-          type: integer
+          type: object
+          additionalProperties: true
       required:
       - type
       - chat_id
@@ -14732,7 +15071,8 @@ components:
           type: string
         chat_id:
           description: Unique identifier for the target chat or username of the target supergroup (in the format `@supergroupusername`)
-          type: integer
+          type: object
+          additionalProperties: true
         user_id:
           description: Unique identifier of the target user
           type: integer
@@ -14782,6 +15122,8 @@ components:
         * [MenuButtonCommands](https://core.telegram.org/bots/api/#menubuttoncommands)
         * [MenuButtonWebApp](https://core.telegram.org/bots/api/#menubuttonwebapp)
         * [MenuButtonDefault](https://core.telegram.org/bots/api/#menubuttondefault)
+      type: object
+      additionalProperties: true
     MenuButtonCommands:
       externalDocs:
         url: https://core.telegram.org/bots/api/#menubuttoncommands
@@ -14834,6 +15176,8 @@ components:
         * [ChatBoostSourcePremium](https://core.telegram.org/bots/api/#chatboostsourcepremium)
         * [ChatBoostSourceGiftCode](https://core.telegram.org/bots/api/#chatboostsourcegiftcode)
         * [ChatBoostSourceGiveaway](https://core.telegram.org/bots/api/#chatboostsourcegiveaway)
+      type: object
+      additionalProperties: true
     ChatBoostSourcePremium:
       externalDocs:
         url: https://core.telegram.org/bots/api/#chatboostsourcepremium
@@ -15031,6 +15375,8 @@ components:
         * [InputMediaAudio](https://core.telegram.org/bots/api/#inputmediaaudio)
         * [InputMediaPhoto](https://core.telegram.org/bots/api/#inputmediaphoto)
         * [InputMediaVideo](https://core.telegram.org/bots/api/#inputmediavideo)
+      type: object
+      additionalProperties: true
     InputMediaPhoto:
       externalDocs:
         url: https://core.telegram.org/bots/api/#inputmediaphoto
@@ -15257,6 +15603,8 @@ components:
 
         * [InputPaidMediaPhoto](https://core.telegram.org/bots/api/#inputpaidmediaphoto)
         * [InputPaidMediaVideo](https://core.telegram.org/bots/api/#inputpaidmediavideo)
+      type: object
+      additionalProperties: true
     InputPaidMediaPhoto:
       externalDocs:
         url: https://core.telegram.org/bots/api/#inputpaidmediaphoto
@@ -15437,7 +15785,9 @@ components:
       type: object
       properties:
         sticker:
-          $ref: '#/components/schemas/InputFile'
+          description: The added sticker. Pass a *file\_id* as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, upload a new one using multipart/form-data, or pass “attach://\<file\_attach\_name\>” to upload a new one using multipart/form-data under \<file\_attach\_name\> name. Animated and video stickers can't be uploaded via HTTP URL. [More information on Sending Files »](https://core.telegram.org/bots/api/#sending-files)
+          type: object
+          additionalProperties: true
         format:
           description: Format of the added sticker, must be one of “static” for a **.WEBP** or **.PNG** image, “animated” for a **.TGS** animation, “video” for a **.WEBM** video
           type: string
@@ -15578,6 +15928,8 @@ components:
         * [InlineQueryResultVenue](https://core.telegram.org/bots/api/#inlinequeryresultvenue)
         * [InlineQueryResultVideo](https://core.telegram.org/bots/api/#inlinequeryresultvideo)
         * [InlineQueryResultVoice](https://core.telegram.org/bots/api/#inlinequeryresultvoice)
+      type: object
+      additionalProperties: true
     InlineQueryResultArticle:
       externalDocs:
         url: https://core.telegram.org/bots/api/#inlinequeryresultarticle
@@ -16534,6 +16886,8 @@ components:
         * [InputVenueMessageContent](https://core.telegram.org/bots/api/#inputvenuemessagecontent)
         * [InputContactMessageContent](https://core.telegram.org/bots/api/#inputcontactmessagecontent)
         * [InputInvoiceMessageContent](https://core.telegram.org/bots/api/#inputinvoicemessagecontent)
+      type: object
+      additionalProperties: true
     InputTextMessageContent:
       externalDocs:
         url: https://core.telegram.org/bots/api/#inputtextmessagecontent
@@ -17024,6 +17378,8 @@ components:
         * [RevenueWithdrawalStatePending](https://core.telegram.org/bots/api/#revenuewithdrawalstatepending)
         * [RevenueWithdrawalStateSucceeded](https://core.telegram.org/bots/api/#revenuewithdrawalstatesucceeded)
         * [RevenueWithdrawalStateFailed](https://core.telegram.org/bots/api/#revenuewithdrawalstatefailed)
+      type: object
+      additionalProperties: true
     RevenueWithdrawalStatePending:
       externalDocs:
         url: https://core.telegram.org/bots/api/#revenuewithdrawalstatepending
@@ -17103,6 +17459,8 @@ components:
         * [TransactionPartnerTelegramAds](https://core.telegram.org/bots/api/#transactionpartnertelegramads)
         * [TransactionPartnerTelegramApi](https://core.telegram.org/bots/api/#transactionpartnertelegramapi)
         * [TransactionPartnerOther](https://core.telegram.org/bots/api/#transactionpartnerother)
+      type: object
+      additionalProperties: true
     TransactionPartnerUser:
       externalDocs:
         url: https://core.telegram.org/bots/api/#transactionpartneruser
@@ -17391,6 +17749,8 @@ components:
         * [PassportElementErrorTranslationFile](https://core.telegram.org/bots/api/#passportelementerrortranslationfile)
         * [PassportElementErrorTranslationFiles](https://core.telegram.org/bots/api/#passportelementerrortranslationfiles)
         * [PassportElementErrorUnspecified](https://core.telegram.org/bots/api/#passportelementerrorunspecified)
+      type: object
+      additionalProperties: true
     PassportElementErrorDataField:
       externalDocs:
         url: https://core.telegram.org/bots/api/#passportelementerrordatafield
