@@ -99,7 +99,7 @@ fn main() -> anyhow::Result<()> {
     let parsed = tele_api_parser::get(&api)?;
 
     let mut indexer = Indexer::new(path.into_str());
-    let api = openapi::generate(parsed);
+    let api = openapi::generate(parsed.clone());
     indexer.add(
         &api,
         vec![
@@ -108,6 +108,16 @@ fn main() -> anyhow::Result<()> {
             Format::Yaml("openapi.yaml"),
         ],
     )?;
+
+    let simplified_api = openapi::generate_simplified(parsed.clone());
+    indexer.add(
+        &simplified_api,
+        vec![
+            Format::Json("openapi.simplified.json"),
+            Format::MinimizedJson("openapi.simplified.min.json"),
+            Format::Yaml("openapi.simplified.yaml"),
+        ],
+)?;
 
     indexer.generate()?;
 
