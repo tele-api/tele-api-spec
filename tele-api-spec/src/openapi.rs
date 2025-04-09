@@ -22,6 +22,7 @@ use openapiv3::{
     StatusCode,
     StringType,
     Type,
+    AdditionalProperties,
 };
 use tele_api_parser::{Argument, Field, MethodArgs, ObjectData, Parsed, Type as ParserType};
 
@@ -191,39 +192,6 @@ pub fn generate(parsed: Parsed) -> OpenAPI {
     api
 }
 
-fn make_properties_and_required<T>(
-    common: Vec<T>,
-) -> (IndexMap<String, ReferenceOr<Box<Schema>>>, Vec<String>)
-where T: Into<CommonContent> {
-    common.into_iter().map(Into::into).fold(
-        (indexmap![], vec![]),
-        |(mut properties, mut required), content| {
-            if content.required {
-                required.push(content.name.clone());
-            }
-
-            let ref_or_schema_parts = content.kind.into_ref_or_schema_parts();
-            let ref_or_schema = match ref_or_schema_parts {
-                ReferenceOr::Item(SchemaParts {
-                    default,
-                    kind: schema_kind,
-                }) => ReferenceOr::Item(Box::new(Schema {
-                    schema_data: SchemaData {
-                        description: Some(content.description),
-                        default,
-                        ..SchemaData::default()
-                    },
-                    schema_kind,
-                })),
-                ReferenceOr::Reference { reference } => ReferenceOr::Reference { reference },
-            };
-            properties.insert(content.name, ref_or_schema);
-
-            (properties, required)
-        },
-    )
-}
-
 pub fn generate_simplified(parsed: Parsed) -> OpenAPI {
     let mut api: OpenAPI = serde_yml::from_str(BASE_SCHEMA).expect("Base schema is invalid");
 
@@ -246,15 +214,11 @@ pub fn generate_simplified(parsed: Parsed) -> OpenAPI {
                     ..ObjectType::default()
                 }))
             }
-            ObjectData::Elements(elements) => {
-                if let Some(first_element) = elements.into_iter().next() {
-                    match first_element.into_schema_first() {
-                        ReferenceOr::Item(boxed_schema) => boxed_schema.schema_kind,
-                        ReferenceOr::Reference { reference: _ } => SchemaKind::Any(AnySchema::default()),
-                    }
-                } else {
-                    SchemaKind::Any(AnySchema::default())
-                }
+            ObjectData::Elements(_elements) => {
+                SchemaKind::Type(Type::Object(ObjectType {
+                    additional_properties: Some(AdditionalProperties::Any(true)),
+                    ..ObjectType::default()
+                }))
             }
             ObjectData::Unknown => SchemaKind::Any(AnySchema::default()),
         };
@@ -557,12 +521,12 @@ impl TypeExt for ParserType {
                 };
                 SchemaKind::Type(schema_type)
             }
-            Self::Or(types) => {
-                if let Some(first_type) = types.into_iter().next() {
-                    return first_type.into_ref_or_schema_parts_first();
-                } else {
-                    SchemaKind::Any(AnySchema::default())
-                }
+            Self::Or(_) => {
+                // 创建通用对象（类似 Go 中的 any 或 interface{}）
+                SchemaKind::Type(Type::Object(ObjectType {
+                    additional_properties: Some(AdditionalProperties::Any(true)),
+                    ..ObjectType::default()
+                }))
             },
             Self::Object(reference) => {
                 return ReferenceOr::Reference {
@@ -623,4 +587,37 @@ impl From<Field> for CommonContent {
             kind:        field.kind,
         }
     }
+}
+
+fn make_properties_and_required<T>(
+    common: Vec<T>,
+) -> (IndexMap<String, ReferenceOr<Box<Schema>>>, Vec<String>)
+where T: Into<CommonContent> {
+    common.into_iter().map(Into::into).fold(
+        (indexmap![], vec![]),
+        |(mut properties, mut required), content| {
+            if content.required {
+                required.push(content.name.clone());
+            }
+
+            let ref_or_schema_parts = content.kind.into_ref_or_schema_parts();
+            let ref_or_schema = match ref_or_schema_parts {
+                ReferenceOr::Item(SchemaParts {
+                    default,
+                    kind: schema_kind,
+                }) => ReferenceOr::Item(Box::new(Schema {
+                    schema_data: SchemaData {
+                        description: Some(content.description),
+                        default,
+                        ..SchemaData::default()
+                    },
+                    schema_kind,
+                })),
+                ReferenceOr::Reference { reference } => ReferenceOr::Reference { reference },
+            };
+            properties.insert(content.name, ref_or_schema);
+
+            (properties, required)
+        },
+    )
 }
